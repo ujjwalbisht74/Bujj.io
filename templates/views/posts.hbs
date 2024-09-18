@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\posts.css" />
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <main id="all">
+        <div class="container-fluid navbar-style py-3">
+            <div class="row">
+                <div class="col-12">
+                    {{! <a class="navbar-brand" href="#" id="logo">UJJWAL BISHT</a> }}
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home
+                                        <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#aboutid">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/projects" target="_blank">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/posts" target="_blank">Posts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contactid">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div class="term">
+                <h1 class="terminal_title">Let's interact</h1>
+                <div class="play">
+                    <div id="terminal">
+                        <!-- Terminal Bar -->
+                        <section id="terminal__bar">
+                            <div id="bar__buttons">
+                                <button class="bar__button" id="bar__button--exit">&#10005;</button>
+                                <button class="bar__button">&#9472;</button>
+                                <button class="bar__button">&#9723;</button>
+                            </div>
+                            <p id="bar__user">ujjwal's gtihub console~</p>
+                        </section>
+                        <!-- Terminal Body -->
+                        <section id="terminal__body">
+                            <div id="terminal__prompt">
+                                <span id="terminal__prompt--user">teche74:</span>
+                                <span id="terminal__prompt--location">~</span>
+                                <span id="terminal__prompt--bling">$</span>
+                                <input type="text" id="terminal__input" autofocus />
+                            </div>
+                            <div class="terminal-content" id="terminal__output">
+                                <!-- Terminal output will be displayed here -->
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="container2">
+            <!-- LeetCode Summary Section -->
+            <h1 class="leetcode_title">LeetCode Profile Summary</h1>
+            <div class="leet">
+                <div id="leetcode_summary" class="container-fluid leetcode-summary-container py-3">
+                    <div id="leetcode_content">
+                        <!-- LeetCode summary will be displayed here -->
+                        <div class="charts-container">
+                            <div class="chart-item">
+                                <canvas id="problemsBarChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="leet">
+                <div id="calendar-container" class="calendar-container">
+                    <h2 class="calendar-title">Monthly Submissions</h2>
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="js/posts.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+</body>
+
+</html>

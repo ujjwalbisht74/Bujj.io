@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/assistant.css">
+    <title>Asistant</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    {{>navbar}}
+
+    <div id="scene-container"></div>
+
+    <div id="chat-container" style="font-family: 'Rubik Glitch', sans-serif; color: #ff0000; font-size: 1em; margin-top: 20px;"></div>
+
+    <form id="text-to-speech-form" class="text-to-speech-form">
+        <input
+            type="text"
+            id="user-text"
+            class="text-input"
+            placeholder="What do you want to know human...."
+            value = ""
+        />
+        <button id="ask-button" class="ask-button">Ask</button>
+    </form>
+
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Importmap configuration -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js",
+            "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/"
+        }
+    }
+    </script>
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js" integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    <script type="module" src="../js/assistant.js"></script>
+</body>
+</html>
