@@ -1,0 +1,36 @@
+{
+  "name": "buisness_site",
+  "version": "1.0.0",
+  "description": "site which works on technical models and stores data of users ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e  js,hbs",
+    "build": "nodemon src/app.js -e  js,hbs"
+  },
+  "author": "Ujjwal",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^5.4.0",
+    "@google/model-viewer": "^2.1.1",
+    "@huggingface/inference": "^2.8.0",
+    "axios": "^1.7.5",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.4.4",
+    "chartjs-plugin-annotation": "^3.0.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "elevenlabs": "^0.15.0",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jquery": "^3.6.3",
+    "mongoose": "^6.9.0",
+    "openai": "^4.57.0",
+    "three": "^0.167.1",
+    "three-obj-loader": "^1.1.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
