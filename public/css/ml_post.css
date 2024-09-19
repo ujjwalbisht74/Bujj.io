@@ -1,0 +1,172 @@
+.cabin-sketch-regular {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabin-sketch-bold {
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* navbar */
+
+/* navbar */
+.navbar-style {
+    background-color: #ffffff;
+    box-shadow: 2px 4px 13px 1px rgba(255, 248, 248, 0.04);
+}
+
+#logo {
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 2px 5px 3px rgb(244, 242, 242);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    padding-left: 1rem;
+    font-size: 25px;
+    padding: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #00f40c;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Ensures the nav items are centered */
+.navbar-collapse {
+    justify-content: center;
+}
+
+/* Adjust logo and navbar spacing */
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #007bff;
+}
+
+/* other */
+* {
+    font-family: "Cabin Sketch", sans-serif;
+}
+
+
+/* heading */
+
+.heading {
+    font-weight: 400px;
+    font-size: 70px;
+    text-align: center;
+    margin: 30px;
+    color: #007bff;
+}
+
+.myself {
+    display: flexbox;
+    margin: 10px;
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+
+/* overview button */
+/* === removing default button style ===*/
+
+.post_button_cont{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100px; 
+}
+
+.overviewBtn {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.overviewBtn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.overviewBtn:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/* posts */
+
+.posts-overview{
+    padding-left: 40px;  /* Space on the left */
+    padding-right: 40px; /* Space on the right */
+    margin-left: auto;   /* Auto margin to adjust spacing in container */
+    margin-right: auto;  /* Auto margin to adjust spacing in container */
+    max-width: 1200px;   /* Maximum width of the content area */
+    margin-top: 20px;    /* Top margin to add space above the div */
+    margin-bottom: 20px; /* Bottom margin to add space below the div */
+    line-height: 1.6;    /* Increases line spacing for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.choose_post{
+    font-size: 30px;
+    font-weight: 300px;
+}

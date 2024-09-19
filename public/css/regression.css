@@ -1,0 +1,1387 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Indie Flower", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.heading_of_post {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.post_title {
+    font-size: 60px;
+    font-family: "Cabin Sketch", sans-serif;
+    color: red;
+    font-style: italic;
+    margin: 0;
+}
+
+.short_intro {
+    max-width: 800px;
+    text-align: center;
+}
+
+.summary {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.important_words {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 5s steps(10, end), blink-caret 0.75s step-end infinite;
+    font-family: "Cabin Sketch", sans-serif;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.sketch_heading {
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hypo_sketch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.centered_image {
+    max-width: 100%;
+    height: 400px;
+}
+
+/* Question Container */
+.questions_container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.question {
+    display: none;
+    /* Each question is hidden initially */
+    margin: 10px 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+/* Reveal Button */
+.ques_button {
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically (if needed) */
+    height: 100px;
+    /* Adjust based on the height of your container */
+}
+
+.reveal_button {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    border-radius: 25px;
+    position: relative;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.reveal_button .back {
+    background: rgb(var(--secondary));
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reveal_button .front {
+    background: linear-gradient(0deg, rgba(var(--primary), 0.6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+    border-radius: 25px;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: 0.15s;
+    color: rgb(var(--secondary));
+}
+
+.reveal_button:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+}
+
+/* Data Container */
+.data_container {
+    width: 90%;
+    /* Increased width for a more expansive look */
+    margin: 20px auto;
+    /* Added top and bottom margin for better spacing */
+    background-color: #ffffff;
+    /* Ensured a clean white background */
+    padding: 30px;
+    /* Increased padding for more spacing inside the container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Darker and more pronounced shadow */
+    border-radius: 12px;
+    /* Slightly larger border-radius for a smoother corner */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.data_container:hover {
+    transform: translateY(-5px);
+    /* Added a slight lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    /* Increased shadow on hover */
+}
+
+.data_container_heading {
+    text-align: center;
+    color: #444;
+    /* Slightly darker text color for better contrast */
+    font-size: 24px;
+    /* Increased font size for better readability */
+    margin-bottom: 25px;
+    /* Increased bottom margin for more spacing */
+}
+
+/* Table Styling */
+.reg_data table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    /* Slightly increased font size */
+    transition: all 0.3s ease;
+    /* Smooth transition for all changes */
+}
+
+.reg_data th,
+.reg_data td {
+    border: 1px solid #ccc;
+    /* Slightly lighter border for a softer look */
+    padding: 15px;
+    /* Increased padding for more space in cells */
+    text-align: center;
+}
+
+.reg_data th {
+    background-color: #e7e7e7;
+    /* Slightly darker background for headers */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Added uppercase for header text */
+}
+
+.reg_data tr:nth-child(even) {
+    background-color: #f5f5f5;
+    /* Slightly darker alternating row color */
+}
+
+.reg_data tr:hover {
+    background-color: #e0e0e0;
+    /* Darker hover background for rows */
+    cursor: pointer;
+    /* Cursor change on hover */
+}
+
+.reg_data td {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.reg_data td:focus {
+    background-color: #ffd966;
+    /* Highlight focused cell */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Question Highlighting */
+.highlight {
+    background-color: #ffefb3;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#independent-variable,
+#hypothesis-function {
+    font-weight: bold;
+}
+
+.little_info {
+    font-style: italic;
+    color: #555;
+}
+
+/* Scatterplot Info */
+.scatterplot-info {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.scatterplot_container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Equation Display */
+.eqn {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Additional Styling for Reflections */
+.reflections {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+.terminologies {
+    padding: 20px;
+    row-gap: 10px;
+}
+
+/* important terms */
+/* Basic Highlight */
+.terms {
+    background-color: #ffeb3b;
+    /* Bright yellow background */
+    padding: 2px 5px;
+    /* Small padding for spacing */
+    border-radius: 3px;
+    /* Slightly rounded corners */
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* Alternative Highlight with Border */
+.terms {
+    background-color: #e3f2fd;
+    /* Light blue background */
+    padding: 3px 6px;
+    /* Slightly larger padding */
+    border: 1px solid #0288d1;
+    /* Blue border */
+    border-radius: 3px;
+    /* Rounded corners */
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* Highlight with Text Shadow */
+.terms {
+    background-color: #fff3e0;
+    /* Light orange background */
+    color: #ff5722;
+    /* Deep orange text */
+    padding: 5px 10px;
+    /* Larger padding for a boxed effect */
+    border: 2px solid #ff5722;
+    /* Matching border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.too_imp_things {
+    color: #007bff;
+}
+
+.regress_types {
+    margin-top: 25px;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 45px;
+}
+
+.types_summary {
+    margin: 10px;
+    font-family: "Indie Flower", cursive;
+    font-size: 25px;
+}
+
+
+/* types chart */
+
+.regression_chart {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute buttons with equal space between them */
+    gap: 30px;
+    /* Optional: controls the space between buttons */
+    margin-bottom: 20px;
+    padding: 0 10%;
+    /* Adjusts the padding to control overall spacing within the container */
+}
+
+.types_of_regres {
+    text-align: center;
+    margin: 20px;
+}
+
+.regress_types {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.types_summary {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.regression_type {
+    --btn-default-bg: rgb(255, 254, 254);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(255, 253, 253);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #090909;
+    --font-size: 26px;
+    /* 👆 this field should not be empty */
+    --font-weight: 600;
+    --font-family: "Cabin Sketch", sans-serif;
+    /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.regression_type {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+}
+
+.regression_type span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+}
+
+.regression_type span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+}
+
+.regression_type:hover,
+.regression_type:focus {
+    background: var(--btn-hover-bg);
+}
+
+.regression_type:hover span,
+.regression_type:focus span {
+    color: var(--hover-btn-color);
+}
+
+.regression_type:hover span::before,
+.regression_type:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+    0% {
+        content: "#";
+    }
+
+    5% {
+        content: ".";
+    }
+
+    10% {
+        content: "^{";
+    }
+
+    15% {
+        content: "-!";
+    }
+
+    20% {
+        content: "#$_";
+    }
+
+    25% {
+        content: "№:0";
+    }
+
+    30% {
+        content: "#{+.";
+    }
+
+    35% {
+        content: "@}-?";
+    }
+
+    40% {
+        content: "?{4@%";
+    }
+
+    45% {
+        content: "=.,^!";
+    }
+
+    50% {
+        content: "?2@%";
+    }
+
+    55% {
+        content: "\;1}]";
+    }
+
+    60% {
+        content: "?{%:%";
+        right: 0;
+    }
+
+    65% {
+        content: "|{f[4";
+        right: 0;
+    }
+
+    70% {
+        content: "{4%0%";
+        right: 0;
+    }
+
+    75% {
+        content: "'1_0<";
+        right: 0;
+    }
+
+    80% {
+        content: "{0%";
+        right: 0;
+    }
+
+    85% {
+        content: "]>'";
+        right: 0;
+    }
+
+    90% {
+        content: "4";
+        right: 0;
+    }
+
+    95% {
+        content: "2";
+        right: 0;
+    }
+
+    100% {
+        content: "";
+        right: 0;
+    }
+}
+
+/* type info container */
+
+.type_info_container {
+    font-size: 30px;
+}
+
+.type_heading {
+    font-family: "Cabin Sketch", sans-serif;
+    text-align: center;
+
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+
+.linear_summary,
+.linear_explained {
+    font-family: "Indie Flower", cursive;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #514f4f;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(4, 4, 4, 0.05);
+    padding: 20px;
+}
+
+.explain_lin {
+    font-size: 22px;
+}
+
+/* table 2 */
+
+.data_container2 {
+    width: 100%;
+    margin: 20px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.data_container2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.data_container_heading2 {
+    font-family: "Indie Flower", cursive;
+    text-align: center;
+    color: #444;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Table Styling */
+.reg_data2 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.reg_data2 th,
+.reg_data2 td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.reg_data2 th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.reg_data2 tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.reg_data2 tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.reg_data2 td:focus {
+    background-color: #ffd966;
+    outline: none;
+}
+
+.scatterplot_container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#scatterplot2,
+#bestFitLineCanvas {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    /* Set a maximum width */
+    margin: 0 auto;
+    /* Center horizontally */
+}
+
+/* OLS Calculation Section */
+.ols_calculation {
+    font-family: "Cabin Sketch", sans-serif;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.ols_calculation h3 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.ols_step {
+    margin-bottom: 20px;
+}
+
+.ols_step h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.ols_step p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.ols_formula_container {
+    font-family: "Cabin Sketch", sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ols_formula_container h3 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#ols_formula p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+#ols_slope_formula,
+#ols_intercept_formula {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.linear_info_container {
+    padding: 80px;
+    text-align: center;
+}
+
+
+/* multiple regression */
+
+
+.multiple-regression-container {
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+}
+
+.type-heading {
+    font-size: 2em;
+    color: #333;
+}
+
+.multiple-summary,
+.multiple-explained {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.data-container {
+    margin: 20px 0;
+}
+
+.data-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-container th,
+.data-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.daigram_canva {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vis_mat_size {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+}
+
+.box {
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    width: 180px;
+    height: 180px;
+    background-color: #f8d7da;
+    border-top: black;
+    border-bottom: black;
+}
+
+.box2 {
+    width: 270px;
+    height: 120px;
+    background-color: #fde2e4;
+    border-left: black;
+    border-right: black;
+}
+
+.box3 {
+    width: 120px;
+    height: 320px;
+    background-color: #fff3cd;
+    border-top: black;
+    border-bottom: black;
+}
+
+.label {
+    position: absolute;
+    bottom: -30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.container_inverse_exist_daigram {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+}
+
+.equation {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 24px;
+    color: #001f97;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInSlide 6s ease infinite;
+}
+
+/* Control the appearance of each equation */
+#step1 {
+    animation-delay: 0s;
+}
+
+#step2 {
+    animation-delay: 2s;
+}
+
+#step3 {
+    animation-delay: 4s;
+}
+
+#step3 {
+    position: relative;
+    font-size: 28px;
+    animation: bounce 6s ease-in-out infinite;
+}
+
+.underline {
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    animation: underlineAnimation 6s ease infinite;
+    animation-delay: 4.5s;
+}
+
+/* Fade in and slide from the bottom */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+/* Bounce effect for the final equation */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Underline animation */
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.danger {
+    background-color: #ffcc00;
+    /* Yellow for visibility */
+    border: 2px solid #ff0000;
+    /* Red border for urgency */
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.highlighted-word {
+    background-color: #37ff00;
+    /* Yellow for visibility */
+    border: 2px solid #ff0000;
+    /* Red border for emphasis */
+    padding: 2px;
+}
+
+.important-paragraph {
+    background-color: #39cee2;
+    /* Yellow for visibility */
+    border: 2px solid #ff0000;
+    /* Red border for emphasis */
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.heading_svd {
+    font-size: 48px;
+    text-align: center;
+    color: #9400d8;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(165, 59, 59, 0.862);
+    font-size: 60px;
+}
+
+.heading_system_of_equation {
+    font-size: 48px;
+    text-align: center;
+    color: #04f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(165, 59, 59, 0.862);
+    font-size: 60px;
+}
+
+.topic_name {
+    font-size: 48px;
+    text-align: center;
+    color: #ffbc04;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(165, 59, 59, 0.862);
+    font-size: 60px;
+}
+
+
+
+/* svd equation */
+.svd_eqn_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.equation-container {
+    display: flex;
+    gap: 5px;
+    font-size: 30px;
+    animation: pulse 1s 3s forwards;
+    /* Final pulsing animation */
+}
+
+/* Common animation settings */
+.equation span {
+    display: inline-block;
+    opacity: 0;
+}
+
+/* 1. Typing Animation for A */
+.letter-A {
+    animation: typing 0.5s forwards;
+}
+
+/* 2. Fading in the = sign */
+.equals {
+    animation: fadeIn 0.5s 0.5s forwards;
+}
+
+/* 3. Sliding U from left */
+.letter-U {
+    animation: slideInLeft 0.5s 1s forwards;
+}
+
+/* 4. Zooming in S */
+.letter-S {
+    animation: zoomIn 0.5s 1.5s forwards;
+}
+
+/* 5. Letter Morphing for V */
+.letter-V {
+    animation: morph 0.5s 2s forwards;
+}
+
+/* 6. Rotating T */
+.letter-T {
+    animation: rotateIn 0.5s 2.5s forwards;
+}
+
+/* Keyframe Animations */
+
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: auto;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes morph {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Final pulsing effect on the entire equation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* matrixx representation svd  */
+
+.matrix_representation_svd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+}
+
+/* Matrix A */
+.matrix-A {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e1e1;
+    width: 90px;
+    height: 300px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+/* Equals sign */
+.equals {
+    font-size: 50px;
+    margin: 0 10px;
+}
+
+/* Matrix U */
+.matrix-U {
+    position: relative;
+    display: flex;
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.matrix-U-left {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-right: 1px dotted black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.matrix-U-right {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Matrix Sigma */
+.matrix-Sigma {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.sigma-top {
+    width: 100%;
+    text-align: center;
+    height: 50%;
+    background-color: rgba(255, 165, 0, 0.1);
+    position: relative;
+    border-bottom: 1px dotted black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sigma-diagonal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.sigma-symbol {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.sigma-bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* Matrix V^T */
+.matrix-VT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 0, 0.2);
+    border: 4px solid black;
+    font-size: 24px;
+    border-top: #000000;
+    border-bottom: #000000;
+}
+
+.subscript {
+    font-size: 14px;
+    vertical-align: super;
+}
+
+.diag2 {
+    display: flex;
+    align-items: center;
+    /* Vertically centers content */
+    justify-content: center;
+    /* Horizontally centers content */
+    gap: 10px;
+    font-size: 30px;
+}
+
+.solve_svd_hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    background: #f7f9fa;
+    /* Light background to resemble notebook */
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 50px;
+}
+
+.svd_inverse-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.5;
+    font-size: 48px;
+    color: #2043b3;
+    /* Blue handwriting color */
+    font-family: "Cabin Sketch", sans-serif;
+}
+
+.line {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #d0d0d0;
+    width: fit-content;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: draw 2s linear forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+.line:nth-child(1)::before {
+    --delay: 0s;
+}
+
+.line:nth-child(2)::before {
+    --delay: 2s;
+}
+
+.line:nth-child(3)::before {
+    --delay: 4s;
+}
+
+.line:nth-child(4)::before {
+    --delay: 6s;
+}
+
+.line:nth-child(5)::before {
+    --delay: 8s;
+}
+
+.line:nth-child(6)::before {
+    --delay: 10s;
+}
+
+@keyframes draw {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/* Repeat the animation every 12 seconds */
+.equation-container {
+    animation: resetAnimation 12s infinite;
+}
+
+@keyframes resetAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* code  */
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+code {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.heading{
+    font-size: 48px;
+    text-align: center;
+    color: #9400d8;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(165, 59, 59, 0.862);
+    font-size: 60px;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

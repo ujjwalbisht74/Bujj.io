@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+.play {
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.75), black 120%
+    );
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    position: relative;
+}
+
+.play::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+pre {
+    margin: 0;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+#terminal {
+    width: 70vw;
+    height: 65vh;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #111; /* Dark background for the terminal */
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    overflow-y: auto;
+}
+
+#terminal__bar {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(#504b45 0%, #3c3b37 100%);
+}
+
+#bar__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.bar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 5px;
+    font-size: 8px;
+    height: 12px;
+    width: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 100%;
+    background: linear-gradient(#7d7871 0%, #595953 100%);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.bar__button:hover {
+    cursor: pointer;
+}
+
+.bar__button:focus {
+    outline: none;
+}
+
+#bar__button--exit {
+    background: linear-gradient(#f37458 0%, #de4c12 100%);
+}
+
+#bar__user {
+    color: #d5d0ce;
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+#terminal__body {
+    font-family: 'Inconsolata', monospace;
+    height: 500px;
+    padding-top: 2px;
+    margin-top: -1px;
+    overflow-y: auto;
+    color: white; /* Ensure text is visible on the dark background */
+}
+
+#terminal__prompt {
+    display: flex;
+}
+
+#terminal__prompt--user {
+    color: #7eda28;
+}
+
+#terminal__prompt--location {
+    color: #4878c0;
+}
+
+#terminal__prompt--bling {
+    color: #dddddd;
+}
+
+#terminal__input {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+#terminal__output {
+    font-family: 'Inconsolata', monospace;
+    color: #ffffff;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    padding: 10px;
+}
+
+#terminal__output p {
+    margin: 0;
+}
+
+.terminal-content pre {
+    white-space: pre-wrap;
+    font-family: 'Inconsolata', monospace;
+}
+
+.terminal_title{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: "Trade Winds", system-ui;
+    color: rgb(0, 117, 2);
+}
+
+/* navbar */
+
+.navbar-style{
+    background-color: #f8f9fa;
+    box-shadow: 2px 4px 13px 1px rgba(8, 8, 8, 0.04);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333333;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    padding-left: 1rem;
+    font-size: 25px;
+    padding: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f40000;
+    font-family: "Trade Winds", system-ui;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: black;
+}
+
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #007bff;
+}
+
+
+
+/* leetcode panel */
+
+.leetcode_title {
+    margin-top: 20px;
+    font-family: "Trade Winds", system-ui;
+    padding-top: 25px;
+    font-size: 40px;
+    color: #006400; /* Dark green color for default */
+    display: flex;
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+/* Hover Effect */
+.leetcode_title:hover {
+    background: linear-gradient(to right, #f8c800 40%, #ffffff 20%, #070707 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hide default color to show gradient */
+    
+}
+
+.leetcode-summary-container {
+    background-color: #1e1e1e; /* Dark background to match terminal theme */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 600px; /* Maximum width */
+    margin: 0 auto; /* Center container horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+
+/* Chart Item */
+.chart-item {
+    display: flex;
+    justify-content: center; /* Center chart horizontally */
+    width: 100%;
+}
+
+/* Ensure Canvas fits properly */
+canvas {
+    width: 100% !important; /* Ensures canvas takes full width of its container */
+    height: auto !important; /* Keeps aspect ratio intact */
+}
+
+.leet {
+    font-family: "Trade Winds", system-ui;
+    background-color: black;
+    background-image: linear-gradient(to right, #f8c800 60%, #ffffff 20%, #070707 20%);
+    width: 100%; /* Ensures container takes full width available */
+    max-width: 900px; /* Sets a maximum width for the container */
+    overflow: hidden; /* Hides any overflow within the container */
+    padding: 2rem;
+    color: white;
+    text-shadow: 0 0 5px #C8C8C8;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically (if needed) */
+    margin: 0 auto; /* Center the container itself horizontally */
+}
+
+/* calander */
+
+/* Calendar Container */
+.calendar-container {
+    background-color: #1e1e1e; /* Dark background to match terminal theme */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    max-width: 600px; /* Maximum width */
+    margin: 0;
+}
+
+/* Calendar Title */
+.calendar-title {
+    font-family: "Trade Winds", system-ui;
+    font-size: 24px;
+    color: #f8c800; /* Gold color for title */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Calendar Grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the week */
+    gap: 1px;
+}
+
+/* Calendar Cell */
+.calendar-cell {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px; /* Increased padding for better appearance */
+    text-align: center;
+    color: #fff;
+    font-weight: bold; /* Bold text for better readability */
+}
+
+.empty {
+    background-color: #ffffff;
+}
+
+
+.submission {
+    background-color: #ffeb3b;
+    color:#ffeb3b;
+    font-weight: bold;
+}
+

@@ -1,0 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/rubik-glitch');
+
+* {
+    background-color: black;
+    font-family: 'Rubik Glitch', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+}
+
+/* navbar */
+.navbar-style {
+    background-color: #000000;
+    box-shadow: 2px 4px 13px 1px rgba(8, 8, 8, 0.04);
+}
+
+#logo {
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 2px 5px 3px rgb(149, 139, 139);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333333;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    padding-left: 1rem;
+    font-size: 25px;
+    padding: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f40000;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Ensures the nav items are centered */
+.navbar-collapse {
+    justify-content: center;
+}
+
+/* Adjust logo and navbar spacing */
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #007bff;
+}
+
+/* scene */
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* text-to-speech form */
+.text-to-speech-form {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+.text-input {
+    background: transparent;
+    width: 510px;
+    border: 1px solid rgba(176, 12, 63, 0.8);
+    outline: none;
+    border-radius: 8px;
+    color: #b00c3f;
+    padding: 10px;
+    placeholder: #b00c3f; /* This should be handled via JS for placeholder color */
+}
+
+.text-input::placeholder {
+    color: #b00c3f;
+}
+
+.ask-button {
+    color: #b00c3f;
+    padding: 10px;
+    border: 1px solid #b00c3f;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.ask-button:disabled {
+    color: #c1c1c1;
+    cursor: not-allowed;
+    background-color: #6c757d;
+}
+
+.ask-button:not(:disabled):hover {
+    background-color: #b00c3f;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* chat container */
+#chat-container {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 50px;
+    color: #b00c3f;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Add typing effect cursor */
+.typing-effect::after {
+    content: '|';
+    color: #b00c3f;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

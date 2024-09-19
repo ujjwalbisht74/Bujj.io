@@ -1,0 +1,806 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+* {
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+li,
+p,
+a {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.model-view-css-fix {
+    height: 60vh;
+    width: 60vw;
+}
+
+.my_name {
+    font-weight: bolder;
+    transition: color 0.3s, transform 0.3s;
+    animation: bounce 1s infinite;
+}
+
+.my_name:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+model-viewer {
+    height: 100%;
+    width: 100%;
+}
+
+.row {
+    margin: 0;
+}
+
+/*  nav + logo */
+
+.navbar-style {
+    background-color: #f8f9fa;
+    box-shadow: 2px 4px 13px 1px rgba(8, 8, 8, 0.04);
+}
+
+#logo {
+    font-weight: 600;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #03e803;
+    text-shadow: 2px 5px 3px rgb(149, 139, 139);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333333;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    padding-left: 1rem;
+    font-size: 25px;
+    padding: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f40000;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Ensures the nav items are centered */
+.navbar-collapse {
+    justify-content: center;
+}
+
+/* Adjust logo and navbar spacing */
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
+/* our hero sections  */
+
+.hero-text h1 {
+    font-size: 5.5rem;
+    line-height: 1.5;
+    text-shadow: 5px 4px 11px rgba(0, 0, 0, 0.26);
+    letter-spacing: 1px;
+    color: #2f2f2f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-text h1:nth-child(2) {
+    font-weight: bold;
+    color: #5222d0;
+}
+
+.hero-text p,
+.skills p,
+label {
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    color: #777676;
+    text-transform: capitalize;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.hero-text p span {
+    font-weight: bold;
+    color: rgb(7, 255, 2);
+}
+
+.btn-style {
+    text-decoration: none;
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    background: #ec615b;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+
+/* about us style starts  */
+
+.about-style {
+    margin: 10rem 0;
+}
+
+.about-style .main-heading,
+.skills-style .main-heading,
+.contact-style .main-heading {
+    font-size: 5rem;
+    color: #f01d28;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.about-style .sub-heading,
+.skills-style .sub-heading,
+.contact-style .sub-heading {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    line-height: 2;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+/* our services style starts  */
+
+.skills-style {
+    margin-bottom: 10rem;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.skills {
+    margin-top: 75px;
+    padding-bottom: 30px;
+    padding: 0 30px;
+    min-height: 198px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(254, 254, 254);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+}
+
+.skills .icon {
+    margin-bottom: -21px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.skills h4 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.skills:hover h4,
+.skills:hover p {
+    color: #fff;
+}
+
+.data_analysis:hover {
+    box-shadow: 0 0 25px 0 rgba(33, 39, 221, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #f33474 0%, #f55b2a 50%);
+}
+
+.models:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #1014e2 0%, #35c6df 50%);
+}
+
+.visualizations:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #11f120 0%, #1cda88 50%);
+}
+
+.algo_optimization:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fd7f30 0%, #eb1414 50%);
+}
+
+.model_interpretability:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #762fd9 0%, #0400f6 50%);
+}
+
+.model_deployment:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.2);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #d7e10d 0%, #e87516 50%);
+}
+
+/* our services style ends  */
+
+/* contact us starts here  */
+
+.contact-style {
+    margin: 10rem 0;
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.form-control {
+    padding: 2rem 1rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+#emailHelp,
+::placeholder {
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    font-weight: 600;
+}
+
+/* footer sections ends  */
+
+footer {
+    background: rgb(221, 217, 217);
+}
+
+footer p {
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* media queries part starts here  */
+
+@media (max-width: 768px) {
+    #logo {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    figure {
+        margin: 5rem 0;
+    }
+
+    figure img {
+        min-width: 100%;
+    }
+
+    .hero-text p,
+    .skills p,
+    label {
+        font-size: 1.5rem;
+    }
+
+    .about-style .sub-heading,
+    .service-style .sub-heading,
+    .contact-style .sub-heading {
+        font-size: 2rem;
+    }
+}
+
+
+
+body {
+    background-color: rgb(255, 255, 255);
+
+    background-image:
+        -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgb(250, 4, 4)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(21, 31, 230, 0.84)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255, 255, 255, .9)), color-stop(0.05, rgba(249, 249, 249, 0.3)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255, 255, 255, .4)), color-stop(0.03, rgba(255, 253, 253, 0.914)), to(transparent));
+
+    background-image:
+        -moz-radial-gradient(circle, #FFFFFF 2px, rgba(231, 242, 19, 0.899) 4px, transparent 40px),
+        -moz-radial-gradient(circle, #FFFFFF 1px, rgba(255, 186, 170, .4) 3px, transparent 30px),
+        -moz-radial-gradient(circle, rgba(255, 255, 255, .9) 1px, rgba(251, 255, 186, .3) 2px, transparent 40px),
+        -moz-radial-gradient(circle, rgba(255, 255, 255, .4), rgba(253, 255, 219, .2) 1px, transparent 30px);
+
+    background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
+
+    -moz-animation-name: movement;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes movement {
+    from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+
+    to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+}
+
+/* Chart Container Styling */
+#charts {
+    /* display: none; */
+    position: centre;
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    /* Adjust as needed */
+}
+
+/* Hide charts by default */
+canvas {
+    display: none;
+    background-color: white;
+}
+
+/* Style for showing charts */
+canvas.active {
+    display: block;
+    width: 100%;
+    /* Ensure the canvas uses full width of its container */
+    height: auto !important;
+    /* Maintain aspect ratio */
+    max-height: 500px;
+    /* Optional: Set a maximum height for the charts */
+    border: 2px solid #00ff33;
+    /* Optional: Add a border for better visibility */
+    border-radius: 8px;
+    /* Optional: Round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for better visual depth */
+    margin-bottom: 1rem;
+    /* Space between charts */
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #007bff;
+}
+
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tab-content .card {
+    margin-top: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.visualization-container {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.visualization-container iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 700px;
+    border: none;
+    /* background-color: #fff; */
+}
+
+#linearRegressionChart,
+#classificationChart {
+    width: 600px;
+    height: 400px;
+}
+
+
+#plotContainer {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+}
+
+/* From Uiverse.io by zjssun */
+.btn_reg {
+    position: relative;
+    font-size: 14px;
+    padding: 3px 3px;
+    border-radius: 14px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7d2ae8;
+    transition: all 0.2s ease;
+    /* margin-left: 280px; */
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.btn_reg:active {
+    transform: scale(0.96);
+}
+
+.btn_reg:before,
+.btn_reg:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.btn_reg:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 25% 25%, 20% 20%, 25% 25%, 20% 20%, 15% 15%, 20% 20%,
+        15% 15%, 20% 20%;
+    background-position: 50% 130%;
+    animation: greentopBubbles 0.5s ease;
+}
+
+@keyframes greentopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.btn_reg:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 20% 20%, 25% 25%, 20% 20%, 25% 25%, 20% 20%, 25% 25%, 20% 20%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.8s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+.btn_classi {
+    position: relative;
+    font-size: 14px;
+    padding: 3px 3px;
+    border-radius: 14px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7d2ae8;
+    transition: all 0.2s ease;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.btn_classi:active {
+    transform: scale(0.96);
+}
+
+.btn_classi:before,
+.btn_classi:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.btn_classi:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 25% 25%, 20% 20%, 25% 25%, 20% 20%, 15% 15%, 20% 20%,
+        15% 15%, 20% 20%;
+    background-position: 50% 130%;
+    animation: greentopBubbles 0.5s ease;
+}
+
+.btn_classi:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 20% 20%, 25% 25%, 20% 20%, 25% 25%, 20% 20%, 25% 25%, 20% 20%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.8s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+
+/* From Uiverse.io by satyamchaudharydev */
+/* === removing default button style ===*/
+.see-visualization-btn {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.see-visualization-btn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 1, 1, 0.996);
+    --animation-color: #ff0000;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.see-visualization-btn:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+
+/* From Uiverse.io by gharsh11032000 */
+.btn_contact {
+    position: relative;
+    text-decoration: none;
+    color: #e8e8e8;
+    padding: 15px 30px;
+    width: 170px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.btn_contact span,
+.btn_contact span::before {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.btn_contact span::before {
+    content: 'Hello!';
+    top: -100%;
+}
+
+.btn_contact:before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #e8e8e8;
+    border-left: 2px solid #e8e8e8;
+}
+
+.btn_contact:after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #e8e8e8;
+    border-right: 2px solid #e8e8e8;
+}
+
+.btn_contact:after,
+.btn_contact:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.btn_contact:hover {
+    box-shadow: 0 0 30px rgba(248, 155, 41, 0.4),
+        0 0 30px rgba(255, 15, 123, 0.4);
+    ;
+}
+
+.btn_contact:hover:before,
+.btn_contact:hover:after {
+    width: 100%;
+    height: 100%;
+}
+
+.btn_contact:hover span {
+    top: 100%;
+}
+
+.btn_contact:active {
+    box-shadow: 0 0 10px rgba(248, 155, 41, 0.4),
+        0 0 10px rgba(255, 15, 123, 0.4);
+    ;
+}
+
+
+.model_button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* height: 100vh; */
+}
